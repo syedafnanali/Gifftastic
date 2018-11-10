@@ -11,7 +11,7 @@ $(document).ready(function(){
     //function for gif search button
     $(".sgiff").on("click",function(){
     var gif= $("#gifname").val();
-
+    $("#gifname").val('');
     //If empty display alert
     if (gif.trim()=== ""){
         alert("Enter something in the search bar to get results");
@@ -32,7 +32,7 @@ $(document).ready(function(){
     } else{
         item = $(this).text();
     }
-
+    
     //API link 
     var queryURL = 'https://api.giphy.com/v1/gifs/search?q=' + item + '&api_key=dc6zaTOxFJmzC';
     console.log(queryURL);
